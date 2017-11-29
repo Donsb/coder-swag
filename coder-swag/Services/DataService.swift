@@ -18,7 +18,7 @@ class DataService {
     // This is to simulate the Server we would contact.  Or for a small business, the
     // Data they have.
     private let categories = [
-        Category(title: "SHIRTS", imageName: " shirts.png"),
+        Category(title: "SHIRTS", imageName: "shirts.png"),
         Category(title: "HOODIES", imageName: "hoodies.png"),
         Category(title: "HATS", imageName: "hats.png"),
         Category(title: "DIGITAL", imageName: "digital.png")
