@@ -54,14 +54,38 @@
 		A521EED61FCF3DAC00837F83 /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				A521EEEB1FCF437900837F83 /* Views */,
+				A521EEEA1FCF436E00837F83 /* Model */,
+				A521EEE91FCF435800837F83 /* Controller */,
 				A521EED71FCF3DAC00837F83 /* AppDelegate.swift */,
-				A521EED91FCF3DAC00837F83 /* CategoriesVC.swift */,
 				A521EEDB1FCF3DAC00837F83 /* Main.storyboard */,
 				A521EEDE1FCF3DAC00837F83 /* Assets.xcassets */,
 				A521EEE01FCF3DAC00837F83 /* LaunchScreen.storyboard */,
 				A521EEE31FCF3DAC00837F83 /* Info.plist */,
 			);
 			path = "coder-swag";
+			sourceTree = "<group>";
+		};
+		A521EEE91FCF435800837F83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A521EED91FCF3DAC00837F83 /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A521EEEA1FCF436E00837F83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A521EEEB1FCF437900837F83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
