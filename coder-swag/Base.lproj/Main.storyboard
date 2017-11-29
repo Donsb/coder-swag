@@ -65,7 +65,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="backgroundView" destination="dKp-5a-7yX" id="oT2-5U-hkN"/>
+                                            <outlet property="categoryImage" destination="dKp-5a-7yX" id="NoI-gc-UbJ"/>
                                             <outlet property="categoryTitle" destination="uLs-xJ-dwa" id="gXW-xC-waP"/>
                                         </connections>
                                     </tableViewCell>
