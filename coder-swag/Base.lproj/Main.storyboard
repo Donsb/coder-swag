@@ -84,6 +84,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="V7K-Ei-wQQ"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="Voe-dz-9R6" id="2eH-Hw-iqj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
