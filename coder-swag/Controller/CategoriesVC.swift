@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CategoriesVC: UIViewController {
+/*
+ DataSource and Delegate are PROTOCOLS.  We are agreeing to follow their rules.
+ */
+
+class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /*
      IBOutlets
