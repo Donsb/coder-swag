@@ -76,6 +76,6 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
      END Cell For Row At.
      */
     
-    // 
+    //
 }
 
