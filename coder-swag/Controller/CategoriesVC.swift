@@ -63,11 +63,18 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
      Cell For Row At.
      */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell") as? CategoryCell {
+            let category = DataService.instance.getCategories()[indexPath.row]
+            cell.updateViews(category: category)
+            return cell
+        } else {
+            return CategoryCell()
+        }
     }
     /*
      END Cell For Row At.
      */
     
+    // 
 }
 
