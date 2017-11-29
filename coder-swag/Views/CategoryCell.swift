@@ -21,5 +21,17 @@ class CategoryCell: UITableViewCell {
      Functions
      */
     
+    /*
+     updateViews Function.
+     Function to update the views on the cell.
+     */
+    func updateViews(category: Category) {
+        categoryImage.image = UIImage(named: category.imageName)
+        categoryTitle.text = category.title
+    }
+    /*
+     END updateViews Function.
+     */
+    
     
 }
