@@ -9,7 +9,14 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
-
+    
+    /*
+     IBOutlets
+     */
+    
+    @IBOutlet weak var categoryImage: UIImageView!
+    @IBOutlet weak var categoryTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

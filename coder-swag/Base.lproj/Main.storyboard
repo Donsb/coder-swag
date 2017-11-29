@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="OrD-Ve-xid">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="OrD-Ve-xid" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="165"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OrD-Ve-xid" id="BWq-aa-D4w">
@@ -64,6 +64,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="dKp-5a-7yX" secondAttribute="trailing" id="xzY-kI-LTC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundView" destination="dKp-5a-7yX" id="oT2-5U-hkN"/>
+                                            <outlet property="categoryTitle" destination="uLs-xJ-dwa" id="gXW-xC-waP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
