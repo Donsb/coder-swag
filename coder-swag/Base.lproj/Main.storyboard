@@ -122,7 +122,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cLf-JP-nTL">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cLf-JP-nTL" customClass="ProductViewCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -162,6 +162,11 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="PgD-ms-f16" secondAttribute="bottom" constant="5" id="vTQ-AH-hGg"/>
                                             <constraint firstItem="GMq-r0-zFE" firstAttribute="leading" secondItem="cLf-JP-nTL" secondAttribute="leadingMargin" id="z7k-NB-1qp"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="productImage" destination="FFs-Kn-OFz" id="cP4-XP-0oj"/>
+                                            <outlet property="productPrice" destination="PgD-ms-f16" id="bbd-Oc-Vy9"/>
+                                            <outlet property="productTitle" destination="GMq-r0-zFE" id="Xnr-Pw-ymG"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
