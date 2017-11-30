@@ -17,7 +17,10 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     /*
      IBOutlets
      */
+    
     @IBOutlet weak var categoryTable: UITableView!
+    
+    
     
     /*
      Functions
@@ -33,9 +36,7 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         categoryTable.dataSource = self
         categoryTable.delegate = self
     }
-    /*
-     END View Did Load.
-     */
+    // END View Did Load.
     
     
     /*
@@ -44,9 +45,7 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    /*
-     END Did Receive Memory Warning Function.
-     */
+    // END Did Receive Memory Warning Function.
     
     
     /*
@@ -55,9 +54,7 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
-    /*
-     END Number Of Rows In Section.
-     */
+    // END Number Of Rows In Section.
     
     
     /*
@@ -72,10 +69,42 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             return CategoryCell()
         }
     }
-    /*
-     END Cell For Row At.
-     */
+    // END Cell For Row At.
     
-    //
+    /*
+     Did Select Row At Function.
+     */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+    }
+    // END Did Select Row At.
+    
+    /*
+     Prepare For Segue Function.
+     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productsVC = segue.destination as? ProductsVC {
+            productsVC.initProducts(category: sender as! Category)
+        }
+    }
+    // END Prepare For Segue Function.
+    
 }
+// END class CategoriesVC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

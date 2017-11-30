@@ -9,27 +9,45 @@
 import UIKit
 
 class ProductsVC: UIViewController {
-
+    
+    /*
+     Instance Variables.
+     */
+    
+    private(set) public var products = [Product]()
+    
+    
+    /*
+     Functions.
+     */
+    
+    /*
+     ViewDidLoad Function.
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    // END View Did Load Function.
+    
+    /*
+     Did Receive Memory Warning Function.
+     */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    // END Did receive Memory Warning Function.
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     InitProducts Function.
+        ->Function to get the category title in order to pass it to the CategoriesVC Class.
+     */
+    func initProducts(category: Category) {
+        products = DataService.instance.getProducts(forCategoryTitle: category.title)
     }
-    */
-
+    // END InitProducts Function.
+    
 }
+// END Class ProductsVC.
+
+
+
