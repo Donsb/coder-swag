@@ -85,6 +85,8 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productsVC = segue.destination as? ProductsVC {
+            // assert will only run at build time for devs, if it can't cast sender as Category it will crash.
+            assert(sender as? Category != nil)
             productsVC.initProducts(category: sender as! Category)
         }
     }
