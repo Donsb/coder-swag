@@ -52,15 +52,78 @@ class DataService {
     // Product Data for Digital.  Empty Array of Type Product.
     private let digitalGoods = [Product]()
     
+    /*
+     Functions.
+     */
+    
     
     // Function that would contact a Server and retreive Data.
     // Just a simulation as no Server actually exists.
     func getCategories()-> [Category] {
         return categories
     }
+    /*
+     END getCategories.
+     */
     
     
+    /*
+     Get Products Function.
+     */
+    
+    func getProducts(forCategoryTitle title:String) -> [Product] {
+        switch title {
+        case "SHIRTS":
+            return getShirts()
+        case "HATS":
+            return getHats()
+        case "HOODIES":
+            return getHoodies()
+        case "DIGITAL":
+            return getDigitalGoods()
+        default:
+            return getShirts()
+        }
+    }
+    // END Get Products Function
+    
+    /*
+     Get Hats Function.
+     */
+    
+    func getHats() -> [Product] {
+        return hats
+    }
+    // END Get Hats Function.
+    
+    /*
+     Get Hoodies Function.
+     */
+    
+    func getHoodies()-> [Product] {
+        return hoodies
+    }
+    // END Get Hoodies Function.
+    
+    /*
+     Get Shirts Function.
+     */
+    
+    func getShirts()-> [Product] {
+        return shirts
+    }
+    // END Get Shirts Function.
+    
+    /*
+     Get Digital Goods Function.
+     */
+    
+    func getDigitalGoods()-> [Product] {
+        return digitalGoods
+    }
+    // END Get Didital Goods Function.
 }
+// END Class DataService.
 
 
 
