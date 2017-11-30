@@ -12,14 +12,12 @@ import UIKit
  DataSource and Delegate are PROTOCOLS.  We are agreeing to follow their rules.
  */
 class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
     
     /*
      IBOutlets
      */
     
     @IBOutlet weak var categoryTable: UITableView!
-    
     
     
     /*
@@ -71,6 +69,7 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     // END Cell For Row At.
     
+    
     /*
      Did Select Row At Function.
      */
@@ -80,11 +79,17 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     // END Did Select Row At.
     
+    
     /*
      Prepare For Segue Function.
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productsVC = segue.destination as? ProductsVC {
+            // Take out the wording in Nav Back Button
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
             // assert will only run at build time for devs, if it can't cast sender as Category it will crash.
             assert(sender as? Category != nil)
             productsVC.initProducts(category: sender as! Category)
@@ -94,19 +99,6 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
 }
 // END class CategoriesVC.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

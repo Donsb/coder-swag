@@ -35,7 +35,7 @@ class ProductViewCell: UICollectionViewCell {
     // END Update Views Function.
     
 }
-
+// END Class ProductViewCell.
 
 
 

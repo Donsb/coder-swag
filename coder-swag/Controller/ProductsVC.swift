@@ -27,6 +27,7 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
      Functions.
      */
     
+    
     /*
      ViewDidLoad Function.
      */
@@ -37,6 +38,7 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     // END View Did Load Function.
     
+    
     /*
      Did Receive Memory Warning Function.
      */
@@ -45,14 +47,18 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     // END Did receive Memory Warning Function.
     
+    
     /*
      InitProducts Function.
         ->Function to get the category title in order to pass it to the CategoriesVC Class.
      */
     func initProducts(category: Category) {
         products = DataService.instance.getProducts(forCategoryTitle: category.title)
+        // Add Title to the NavBar.
+        navigationItem.title = category.title
     }
     // END InitProducts Function.
+    
     
     /*
      Number Of Items In Section Function.
@@ -61,6 +67,7 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         return products.count
     }
     // END Number Of Items In Section Function.
+    
     
     /*
      Cell For Item At Function.
@@ -77,21 +84,6 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
 }
 // END Class ProductsVC.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

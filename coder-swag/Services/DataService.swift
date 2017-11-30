@@ -9,6 +9,11 @@
 import Foundation
 
 class DataService {
+    
+    /*
+     Instance Variables.
+     */
+    
     /*
      Static means there is only ever 1 copy of it in memory.
      In other words, there is only 1 copy of our data!
@@ -52,6 +57,7 @@ class DataService {
     // Product Data for Digital.  Empty Array of Type Product.
     private let digitalGoods = [Product]()
     
+    
     /*
      Functions.
      */
@@ -62,15 +68,12 @@ class DataService {
     func getCategories()-> [Category] {
         return categories
     }
-    /*
-     END getCategories.
-     */
+    // END getCategories.
     
     
     /*
      Get Products Function.
      */
-    
     func getProducts(forCategoryTitle title:String) -> [Product] {
         switch title {
         case "SHIRTS":
@@ -87,51 +90,44 @@ class DataService {
     }
     // END Get Products Function
     
+    
     /*
      Get Hats Function.
      */
-    
     func getHats() -> [Product] {
         return hats
     }
     // END Get Hats Function.
     
+    
     /*
      Get Hoodies Function.
      */
-    
     func getHoodies()-> [Product] {
         return hoodies
     }
     // END Get Hoodies Function.
     
+    
     /*
      Get Shirts Function.
      */
-    
     func getShirts()-> [Product] {
         return shirts
     }
     // END Get Shirts Function.
     
+    
     /*
      Get Digital Goods Function.
      */
-    
     func getDigitalGoods()-> [Product] {
         return digitalGoods
     }
     // END Get Didital Goods Function.
+    
 }
 // END Class DataService.
-
-
-
-
-
-
-
-
 
 
 

@@ -9,13 +9,23 @@
 import Foundation
 
 struct Category {
+    /*
+     Instance Variables.
+     */
+    
     // Public Variables that can be fetched but not Set!
     private(set) public var title:String
     private(set) public var imageName: String
     
-    // Initializer that sets the title and imageName on creation.
+    /*
+     Initializer.
+     */
+    
+    // init that sets the title and imageName on creation.
     init(title: String, imageName: String) {
         self.title = title
         self.imageName = imageName
     }
+    // End init.
 }
+// End Struct Category.

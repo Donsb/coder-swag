@@ -35,3 +35,4 @@ class CategoryCell: UITableViewCell {
     
     
 }
+// END Class CategoryCell.
