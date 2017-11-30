@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ProductsVC: UIViewController {
+class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    /*
+     IBOutlets.
+     */
+    
+    @IBOutlet weak var productsCollection: UICollectionView!
     
     /*
      Instance Variables.
@@ -46,8 +52,31 @@ class ProductsVC: UIViewController {
     }
     // END InitProducts Function.
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 }
 // END Class ProductsVC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
