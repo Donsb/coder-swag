@@ -32,6 +32,8 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
      */
     override func viewDidLoad() {
         super.viewDidLoad()
+        productsCollection.dataSource = self
+        productsCollection.delegate = self
     }
     // END View Did Load Function.
     
@@ -52,13 +54,26 @@ class ProductsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     // END InitProducts Function.
     
+    /*
+     Number Of Items In Section Function.
+     */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return products.count
     }
+    // END Number Of Items In Section Function.
     
+    /*
+     Cell For Item At Function.
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as? ProductViewCell {
+            let product = products[indexPath.row]
+            cell.updateViews(product: product)
+            return cell
+        }
+        return ProductViewCell() // This is in place of an else, should never run.  If does, theres an issue in code.
     }
+    // END Cell For Item At Function.
     
 }
 // END Class ProductsVC.
